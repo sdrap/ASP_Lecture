@@ -1,0 +1,123 @@
+site_name: Scientific Programing - An Introduction
+site_url: http://127.0.0.1:10001/
+
+theme:
+  name: material
+  features:
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.sections
+    - navigation.indexes
+    # - navigation.expand
+    - toc.follow
+    - toc.integrate
+  palette: #
+    - scheme: slate
+      primary: orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light
+    - scheme: default #
+      primary: white
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+  font:
+    text: Roboto Mono
+  # features:
+  # - content.code.copy
+
+plugins:
+  - search
+  # - i18n:
+  #     languages:
+  #       zh: "中文"
+  #       en: "English"
+  #     default_language: "en"
+  #     nav_translations:
+  #       zh:
+  #         Home: 主页
+
+extra:
+  generator: false
+  # alternate:
+  #   - name: 中文
+  #     link: "./zh/"
+  #     lang: zh
+  #   - name: English
+  #     link: "./en/"
+  #     lang: en
+
+nav:
+  - Home: index.md
+  - Lecture:
+      - Introduction: lecture/00-Introduction/000-index.md
+      - Basic of Programing:
+          - Basic Operations, Data Types: lecture/01-Basics-Programing/011-first-steps.md
+          - Control Flows: lecture/01-Basics-Programing/012-control-flows.md
+          - Functions and Classes: lecture/01-Basics-Programing/013-functions-classes.md
+      - Basic Scientific Computations:
+          - Arrays - Numpy: lecture/02-Basics-Scientifics/021-numpy.md
+          - Plotting: lecture/02-Basics-Scientifics/022-plotly.md
+          - Basic Computations: lecture/02-Basics-Scientifics/023-scipy.md
+          - Random Numbers and Monte Carlo: lecture/02-Basics-Scientifics/024-rng-monte-carlo.md
+      - Handeling Data:
+          - Introduction: lecture/03-Data/031-pandas-first-steps.md
+          - Computations: lecture/03-Data/032-pandas-computations.md
+          - Data Manipulations: lecture/03-Data/033-pandas-manipulations.md
+          - Date and Time: lecture/03-Data/034-datetime.md
+          - Databases: lecture/03-Data/035-sql.md
+      - Machine Learning 101:
+          - Linear Regression: lecture/04-ML-101/041-LR.md
+          - Principal Component Analysis: lecture/04-ML-101/042-PCA.md
+          - Clustering: lecture/04-ML-101/043-Cluster.md
+      - Derivative:
+          - Differentiation: lecture/05-Derivatives/051-differentiation.md
+          - PDE: lecture/05-Derivatives/052-PDE.md
+          - Gradient Descent: lecture/05-Derivatives/053-gradient.md
+          - Stochastic Gradient Descent: lecture/05-Derivatives/054-stoch-gradient.md
+      # - Reparing/Improving:
+      #     - Style: lecture/06-Repairing-Improving/061-style.md
+      #     - Track Error: lecture/06-Repairing-Improving/062-debug.md
+      #     - Profile: lecture/06-Repairing-Improving/063-profile.md
+  - Material:
+      - Setup: material/material.md
+      - Homework 01: material/hw01.md
+      - Homework 02: material/hw02.md
+      - Homework 03: material/hw03.md
+      - Homework 04: material/hw04.md
+      - Final Report: material/final.md
+      # - Simple Ex 01: material/ex01.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/node_modules/mathjax/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - markdown_tables_extended
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - def_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
